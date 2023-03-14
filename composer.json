@@ -1,0 +1,35 @@
+{
+    "name": "morrsky/user-search",
+    "license": "MIT",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App",
+            "Component\\": "src/Component"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "ext-xml": "*",
+        "php-di/php-di": "^6.0",
+        "nikic/fast-route": "~0.5.0",
+        "mnapoli/silly": "^1.7",
+        "twig/twig": "^3.2",
+        "robmorgan/phinx": "^0.13.4",
+        "ramsey/uuid": "^4.7",
+        "symfony/dotenv": "^6.2",
+        "beberlei/assert": "^2.9"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "scripts": {
+        "bf": "phpcbf ./src/",
+        "cs": "phpcs ./src/",
+        "db": "sh ./bin/db-refresh.sh",
+        "serve": "php -S localhost:8088 -t public public/index.php",
+        "start": "composer db && composer serve",
+        "test": "phpunit"
+    }
+}

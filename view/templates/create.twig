@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+    <a href="/">Back to list</a>
+
+    <h4>Create user:</h4>
+
+    <div class="row">
+        <form class="col s12" method="POST">
+            {% if error|length > 0 %}
+                <div class="row">
+                    {{ error }}
+                </div>
+            {% endif %}
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="" name="user_name" id="user_name" type="text" class="validate">
+                    <label class="active" for="user_name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+    <a href="/">Back to list</a>
+
+    <h4>User details:</h4>
+
+    <ul class="collection">
+        <li class="collection-item avatar">
+            <span class="title">{{ user.name }}</span>
+            <p class="title">{{ user.id }}</p>
+            <p class="title">{{ user.createdAt }}</p>
+        </li>
+    </ul>
+
+{% endblock %}

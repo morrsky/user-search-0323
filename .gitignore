@@ -1,0 +1,8 @@
+/vendor/
+.env
+/composer.phar
+/composer.lock
+!/var/data/rdbms/.gitignore
+/var/data/rdbms/*
+
+/.idea/
